@@ -62,3 +62,7 @@
 .footer__copyright {
   color: #c7e6ff;
 }
+
+[data-theme="dark"] .footer {
+  background-color: #0a0f1c;
+}

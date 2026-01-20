@@ -42,8 +42,9 @@ export const howItWorksText = {
 export const aboutText = {
   title: 'Sobre a Prontus',
   paragraphs: [
-    'A Prontus nasceu com o propósito de conectar empresas e pessoas de forma estratégica, humana e eficiente. Com atuação nacional, oferecemos serviços completos em Recrutamento, Seleção e Gestão de Recursos Humanos.',
-    'Acreditamos que o capital humano é o maior diferencial competitivo de uma organização — e é por isso que cada processo é conduzido com metodologia própria, análise comportamental e acompanhamento próximo.',
+    'A Prontus nasceu com o propósito de conectar empresas e pessoas de forma estratégica, humana e eficiente.',
+    'Com atuação nacional, a empresa oferece serviços completos em Recrutamento, Seleção e Gestão de Recursos Humanos, ajudando negócios de diferentes portes a formarem equipes mais fortes, engajadas e alinhadas aos seus valores.',
+    'Acreditamos que o capital humano é o maior diferencial competitivo de uma organização — e é por isso que cada processo é conduzido com metodologia própria, análise comportamental e acompanhamento próximo, garantindo contratações assertivas e relações de trabalho duradouras.',
     'Com uma equipe de especialistas, a Prontus se destaca por unir agilidade, precisão e acolhimento em todas as etapas, desde o mapeamento de perfil até o pós-contratação.'
   ]
 };
@@ -54,16 +55,16 @@ export const leadershipText = {
     {
       name: 'Celina Gomes',
       description:
-        'Graduada em Psicologia pela UFRN e pós-graduada em Gestão Estratégica de Pessoas. Com mais de 10 anos de experiência em desenvolvimento humano e organizacional, acredita nas potencialidades únicas de cada pessoa.'
+        'Graduada em Psicologia pela UFRN e pós-graduada em Gestão Estratégica de Pessoas, Celina tem mais de 10 anos de experiência em desenvolvimento humano e organizacional. Atuou como profissional de RH nas Lojas Americanas e em universidade no Rio Grande do Norte, além de ter gerenciado processos seletivos de grande porte e alto volume de vagas simultâneas. Com uma visão voltada para o crescimento sustentável, acredita nas potencialidades únicas de cada pessoa e na importância de alinhar talentos à cultura das empresas.'
     },
     {
       name: 'Larissa Moura',
       description:
-        'Graduada em Administração pela UFRN e com MBA em Gestão Financeira. Reconhecida por sua gestão estratégica e eficiente, defende uma liderança transparente e ética.'
+        'Graduada em Administração pela UFRN e com MBA em Gestão Financeira e Controladoria, Larissa tem ampla experiência na liderança de equipes financeiras, contábeis e administrativas. Reconhecida por sua gestão estratégica e eficiente, tem histórico de redução de custos operacionais e otimização de processos financeiros.Defende uma liderança transparente e ética, sempre alinhada aos valores da empresa e ao crescimento sustentável dos negócios.'
     }
   ],
   closing:
-    'Propósito em comum: Celina e Larissa compartilham a mesma missão de aproximar pessoas e empresas com profissionalismo, empatia e resultado.'
+    'Propósito em comum: Celina e Larissa compartilham a mesma missão de aproximar pessoas e empresas com profissionalismo, empatia e resultado. Sob sua direção, a Prontus RH se consolida como referência em recrutamento, seleção e gestão estratégica de pessoas em todo o Brasil.'
 };
 
 export const clientsText = {
@@ -136,6 +137,11 @@ export const faqText = {
         'A Prontus RH oferece outros serviços além de recrutamento e seleção?',
       answer:
         'Sim. Também atuamos com consultoria de RH, treinamentos corporativos e gestão de pessoas, ajudando empresas a desenvolver equipes mais estratégicas e engajadas.'
+    },
+    {
+      question: 'Por que escolher a Prontus RH?',
+      answer:
+        'Porque unimos metodologia, agilidade e olhar humano. Cada vaga é conduzida por especialistas com experiência prática em gestão de pessoas — entregando resultados reais e contratações que fazem sentido para o negócio.'
     }
   ]
 };

@@ -1,40 +1,42 @@
-import { useState } from 'react';
 import './Header.css';
-import logo from '../../assets/images/prontus - purple no bg.png';
+import { useTheme } from '../../hooks/useTheme';
+
+import logoPurple from '../../assets/images/prontus - purple no bg.png';
+import logoWhite from '../../assets/images/prontus - white no bg.png';
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
+
+  const logo = theme === 'dark' ? logoWhite : logoPurple;
 
   return (
     <header className="header">
       <div className="container header__content">
-        {/* Logo */}
-        <div className="header__logo">
-          <img src={logo} alt="Prontus RH" />
-        </div>
 
-        {/* Botão mobile */}
-        <button
-          className="header__toggle"
-          onClick={() => setOpen(!open)}
-          aria-label="Abrir menu"
-        >
-          ☰
-        </button>
+        <img src={logo} alt="Prontus RH" className="header__logo" />
 
-        {/* Navegação */}
-        <nav className={`header__nav ${open ? 'is-open' : ''}`}>
-          <a href="#how" onClick={() => setOpen(false)}>Como funciona</a>
-          <a href="#about" onClick={() => setOpen(false)}>Sobre</a>
-          <a href="#faq" onClick={() => setOpen(false)}>FAQ</a>
-          <a
-            href="#contact"
-            className="btn-primary"
-            onClick={() => setOpen(false)}
-          >
-            Contrate agora
+        <div className="header__actions">
+          <nav className="header__nav">
+            <a href="#how">Como funciona</a>
+            <a href="#about">Sobre</a>
+          </nav>
+          
+          <a href="#contact" className="btn-primary">
+            Quero contratar agora
           </a>
-        </nav>
+
+          <button
+            className={`theme-toggle ${theme === 'dark' ? 'dark' : ''}`}
+            onClick={toggleTheme}
+            aria-label="Alternar tema"
+          >
+            <span className="toggle-track">
+              <span className="toggle-thumb">
+                {theme === 'dark' ? '🌙' : '☀️'}
+              </span>
+            </span>
+          </button>
+        </div>
       </div>
     </header>
   );

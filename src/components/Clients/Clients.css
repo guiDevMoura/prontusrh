@@ -87,3 +87,7 @@
 .clients::after {
   right: -120px;
 }
+
+[data-theme="dark"] .clients {
+  background-color: #2f1b3a;
+}

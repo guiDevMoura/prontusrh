@@ -5,8 +5,9 @@ body {
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
-  color: var(--color-text);
   background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Containers */
@@ -40,18 +41,20 @@ body {
 
 /* Botão principal */
 .btn-primary {
-  background-color: var(--color-primary);
-  color: #ffffff;
-  padding: 0.8rem 1.8rem;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 0.75rem 1.5rem;
   border-radius: var(--radius-sm);
   font-weight: var(--font-weight-medium);
-  transition: background-color 0.2s ease, transform 0.15s ease;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.15s ease;
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-dark);
+  opacity: 0.9;
   transform: translateY(-1px);
 }
+
 
 /* Links */
 a {
@@ -62,6 +65,7 @@ section {
   scroll-margin-top: 96px;
   padding-top: calc(var(--spacing-lg) * 1.1);
   padding-bottom: calc(var(--spacing-lg) * 1.1);
+  background-color: transparent;
 }
 
 section + section {
@@ -75,4 +79,48 @@ section + section {
   hyphens: auto;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
+}
+
+:root {
+  /* ===== Tema Claro ===== */
+  --color-bg: #ffffff;
+  --color-bg-soft: #e6f4ff;
+  --color-bg-dark: #2f1b3a;
+
+  --color-primary: #2f1b3a; /* roxo */
+  --color-accent: #c7e6ff;
+
+  --color-text: #1c1c1c;
+  --color-muted: #4a4a4a;
+
+  --color-border: rgba(47, 27, 58, 0.15);
+
+  /* Botões */
+  --btn-bg: #2f1b3a;
+  --btn-text: #ffffff;
+
+  /* Cards */
+  --card-bg: #ffffff;
+}
+
+/* ===== Tema Escuro ===== */
+[data-theme="dark"] {
+  --color-bg: #0e1320;
+  --color-bg-soft: #151b2e;
+  --color-bg-dark: #0a0f1c;
+
+  --color-primary: #c7e6ff; /* azul claro para textos */
+  --color-accent: #2f1b3a; /* roxo */
+
+  --color-text: #e9f4ff;
+  --color-muted: #a9bdd4;
+
+  --color-border: rgba(199, 230, 255, 0.12);
+
+  /* Botões */
+  --btn-bg: #c7e6ff;
+  --btn-text: #2f1b3a;
+
+  /* Cards */
+  --card-bg: #151b2e;
 }
