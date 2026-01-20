@@ -1,12 +1,53 @@
 .hero {
-  background-color: var(--color-accent-soft);
-  padding-top: calc(var(--spacing-lg) + 80px);
-  padding-bottom: var(--spacing-lg);
+  position: relative;
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
+/* ===== Background ===== */
+.hero__background {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Cada imagem */
+.hero__bg-image {
+  position: absolute;
+  inset: 0;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+/* Imagem ativa */
+.hero__bg-image.active {
+  opacity: 1;
+}
+
+/* Camada de cor da marca por cima */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(230, 244, 255, 0.8);
+  z-index: 2;
+}
+
+/* ===== Conteúdo ===== */
 .hero__content {
+  position: relative;
+  z-index: 3;
   max-width: 860px;
+  margin: 0 auto;
   text-align: center;
+  padding: 0 var(--spacing-sm);
 }
 
 /* Subtítulo */
@@ -16,7 +57,7 @@
   color: var(--color-primary);
 }
 
-/* Frase de destaque */
+/* Destaque */
 .hero__highlight {
   margin: var(--spacing-md) auto;
   max-width: 700px;
@@ -32,12 +73,7 @@
 /* ===== Mobile ===== */
 @media (max-width: 768px) {
   .hero {
-    padding-top: calc(var(--spacing-md) + 80px);
-    padding-bottom: var(--spacing-md);
-  }
-
-  .hero__content {
-    padding: 0 var(--spacing-sm);
+    min-height: calc(100vh - 160px);
   }
 
   .hero__subtitle {
