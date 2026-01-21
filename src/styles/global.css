@@ -124,3 +124,14 @@ section + section {
   /* Cards */
   --card-bg: #151b2e;
 }
+:root {
+  /* Bolhas - modo claro */
+  --bubble-color-1: rgba(47, 27, 58, 0.08);
+  --bubble-color-2: rgba(47, 27, 58, 0.05);
+}
+
+[data-theme="dark"] {
+  /* Bolhas - modo escuro (azul claro) */
+  --bubble-color-1: rgba(199, 230, 255, 0.18);
+  --bubble-color-2: rgba(199, 230, 255, 0.10);
+}
