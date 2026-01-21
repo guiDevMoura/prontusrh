@@ -56,13 +56,15 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://www.google.com/maps/search/?api=1&query=Natal+Rio+Grande+do+Norte"
+            href="https://www.google.com/maps/search/?api=1&query=R.+Teot%C3%B4nio+de+Carvalho%2C+1050+-+Tirol%2C+Natal+-+RN%2C+59015-100"
             target="_blank"
             rel="noopener noreferrer"
             className="footer__contact"
           >
             <img src={mapIcon} alt="" />
-            <span>Natal, Rio Grande do Norte</span>
+            <span>
+              R. Teotônio de Carvalho, 1050 – Tirol, Natal – RN, 59015-100
+            </span>
           </a>
 
         </div>
